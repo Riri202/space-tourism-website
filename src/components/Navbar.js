@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Navbar({ crew, destination, technology,background }) {
+function Navbar({ crew, destination, technology, background }) {
     return (
         <div className='flex justify-between pt-12'>
             <div className='pl-12'>

@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Data from '../data.json'
 import MoonBG from '../assets/destination/image-moon.png'
 import MarsBG from '../assets/destination/image-mars.png'
@@ -28,8 +28,6 @@ function Destination() {
     setDestination('Titan')
   }
    
-
-
   const images = {
     Moon: MoonBG,
     Mars: MarsBG,
@@ -40,7 +38,8 @@ function Destination() {
   return (
     <>
       <div className='text-8xl flex self-start'><span>01</span>PICK YOUR DESTINATION</div>
-      <nav className='flex space-x-6'>
+      <div className='flex'>
+       <nav className='flex self-end space-x-6'>
         <button onClick={handleMoon} className='py-3 transition-all ease-out hover:border-b-4 font-sans '>
           <p className=' tracking-widest font-thin'>MOON</p>
         </button>
@@ -54,6 +53,7 @@ function Destination() {
           <p className=' tracking-widest font-thin'>TITAN</p>
         </button>
       </nav>
+      </div>
 
       {destination && Data.destinations.map((place, key)=> {
         if (place.name === destination) {
@@ -61,15 +61,12 @@ function Destination() {
             
           <div key={key} className='flex justify-between p-20'>
             <div>
-              <img src={ images[place.name]}alt='destination' />
+              <img src={images[place.name]}alt='destination' />
             </div>
 
 
             <div className='flex flex-col w-1/2 space-y-10'>
-
-
-
-              <h1 className='text-6xl'>{place.name === destination ? place.name : null}</h1>
+               <h1 className='text-6xl'>{place.name === destination ? place.name : null}</h1>
 
               <div>
                 <p> {place.description}</p>
@@ -86,10 +83,7 @@ function Destination() {
                   <p>{ place.travel}</p>
                 </div>
               </div>
-
-
             </div>
-
           </div>
           </>)
         }
