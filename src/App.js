@@ -26,7 +26,7 @@ function App() {
 
   return (
 
-    <div className='w-full h-screen m-0 p-0 overflow-hidden bg-cover text-primary' style={{ backgroundImage: `url(${background})` }}>
+    <div className='w-full  m-0 p-0 overflow-hidden bg-cover text-primary' style={{ backgroundImage: `url(${background})` }}>
       <Router>
         <Navbar background={background} crew={handleCrew} destination={handleDestination} technology={handleTechnology} />
         <Routes>
