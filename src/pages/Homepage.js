@@ -1,16 +1,17 @@
 import React from 'react'
 
+
 function Homepage() {
   return (
-    <div className='flex justify-between p-20 pt-40 h-screen w-11/12' >
-      <div className='flex flex-col space-y-4 w-1/2'>
-        <p className='font-sans text-secondary text-2xl tracking-wider'>SO YOU WANT TO TRAVEL TO</p>
-        <h1 className='font-serif text-9xl tracking-widest'>SPACE</h1>
+    <div className='flex flex-col text-center space-y-8  md:text-left justify-center items-center pt-16 md:flex-row md:justify-between p-20 md:pt-40' >
+      <div className='flex flex-col space-y-10 md:space-y-4 md:w-1/2'>
+        <p className='font-sans text-secondary text-xl md:text-2xl tracking-wider'>SO YOU WANT TO TRAVEL TO</p>
+        <h1 className='font-serif text-7xl  md:text-9xl tracking-widest'>SPACE</h1>
         <p>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
       </div>
 
       <div>
-        <button className='h-72 w-72 rounded-full bg-primary text-main font-serif font-light tracking-wider text-4xl'> EXPLORE </button>
+        <button className='w-60 h-60 md:h-72 md:w-72 rounded-full bg-primary text-main font-serif font-light tracking-wider text-3xl md:text-4xl'> EXPLORE </button>
       </div>
     </div>
   )
