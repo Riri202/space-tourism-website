@@ -12,7 +12,10 @@ module.exports = {
       sans: ['Barlow Condensed', 'sans-serif'],
       serif: ['Bellefair', 'serif'],
     },
-
+    screens: {
+      'sm': '665px',
+      'md': '906px',
+    },
     extend: {},
   },
   plugins: [],

@@ -11,7 +11,7 @@ function Navbar({ crew, destination, technology, background }) {
 
           
                 
-                <div className=' backdrop-blur-3xl w-1/2'>
+                <div className=' backdrop-blur-3xl'>
                     <div className='flex space-x-9 px-20 mr-4 '>
                         <Link to={'/'} onClick={background}>
                          <button className='flex space-x-2 py-5 transition-all ease-out hover:border-b-4 font-sans '>
