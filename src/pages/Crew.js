@@ -71,10 +71,10 @@ function Crew() {
 
                 <div className="carousel-inner relative flex justify-center pl-20 pr-20 w-full overflow-hidden">
                   <div className='space-y-28 w-1/2'>
-                    <div className='pt-10 text-2xl'><span className='font-thin text-secondary mr-3'>02</span> MEET YOUR CREW</div>
+                    <div className='pt-10 text-2xl tracking-widest'><span className='font-bold text-grey mr-3'>02</span> MEET YOUR CREW</div>
                     <div className='flex flex-col justify-center space-y-8'>
                       <div className='flex flex-col space-y-4 uppercase'>
-                        <p className='text-2xl font-serif'>{person.role}</p>
+                        <p className='text-2xl font-serif text-grey'>{person.role}</p>
                         <h1 className='text-6xl tracking-wider font-serif'>{person.name} </h1>
                       </div>
                       <p className='md:text-lg font-sans text-secondary'>{person.bio} </p>

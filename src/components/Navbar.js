@@ -14,12 +14,12 @@ function Navbar({ crew, destination, technology, background }) {
                 <div className=' backdrop-blur-3xl'>
                     <div className='flex space-x-9 px-20 mr-4 '>
                         <Link to={'/'} onClick={background}>
-                         <button className='flex space-x-2 py-5 transition-all ease-out hover:border-b-4 font-sans '>
+                         <button className='flex space-x-2 py-5 transition-all ease-out hover:border-b-4 hover:border-grey focus:border-b-4 focus:border-primary  font-sans '>
                             <p className='font-bold'>00</p>
                             <p className=' tracking-widest font-thin'>HOME</p>
                         </button>
                         </Link>
-                        <Link to={'/destination/'} onClick={destination}>
+                        <Link to={'/destination/'} onClick={destination} >
                         <button className='flex space-x-1 py-5 transition-all ease-out hover:border-b-4'>
                             <p className='font-bold '>01</p>
                             <p className=' tracking-widest font-light'>DESTINATION</p>
