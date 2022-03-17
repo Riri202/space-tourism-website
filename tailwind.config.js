@@ -7,6 +7,7 @@ module.exports = {
       'main': '#0B0D17',
       'primary': '#FFFFFF',
       'secondary': '#D0D6F9',
+      'grey': '#979797'
     },
     fontFamily: {
       sans: ['Barlow Condensed', 'sans-serif'],
