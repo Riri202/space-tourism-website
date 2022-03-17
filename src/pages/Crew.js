@@ -31,7 +31,7 @@ function Crew() {
   // const removeAnimation = () => {
   //   slideRef.current.classList.remove("fade-anim");
   // };
-  
+
   // useEffect(() => {
   //   startSlider();
   //   slideRef.current.addEventListener("animationend", removeAnimation);
@@ -68,35 +68,42 @@ function Crew() {
           return (
             <>
               <div key={key} id="carouselExampleIndicators" className="carousel slide relative" data-bs-ride="carousel">
-                <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    className="active w-6 h-6 rounded-full bg-primary"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                </div>
-                <div className="carousel-inner relative flex justify-between pl-20 pr-20 w-full overflow-hidden">
+
+                <div className="carousel-inner relative flex justify-center pl-20 pr-20 w-full overflow-hidden">
                   <div className='space-y-28 w-1/2'>
-                    <div  className='pt-10 text-2xl'><span className='font-thin text-secondary mr-3'>02</span> MEET YOUR CREW</div>
-                    <div className='flex flex-col justify-center space-y-9 p-10'>
-                      <p className='text-2xl font-serif text-secondary'>{person.role}</p>
-                      <h1 className='text-6xl tracking-wider font-serif'>{person.name} </h1>
-                      <p>{person.bio} </p>
+                    <div className='pt-10 text-2xl'><span className='font-thin text-secondary mr-3'>02</span> MEET YOUR CREW</div>
+                    <div className='flex flex-col justify-center space-y-8'>
+                      <div className='flex flex-col space-y-4 uppercase'>
+                        <p className='text-2xl font-serif'>{person.role}</p>
+                        <h1 className='text-6xl tracking-wider font-serif'>{person.name} </h1>
+                      </div>
+                      <p className='md:text-lg font-sans text-secondary'>{person.bio} </p>
+                    </div>
+
+                    {/* Carousel indicators */}
+                    <div className="carousel-indicators flex justify-start space-x-3 p-0 mb-4">
+                      <button
+                        type="button"
+                        className={person.id === 0 ? "w-3 h-3 rounded-full bg-primary" : "w-3 h-3 rounded-full bg-grey"}
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        className={person.id === 1 ? "w-3 h-3 rounded-full bg-primary" : "w-3 h-3 rounded-full bg-grey"}
+
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        className={person.id === 2 ? "w-3 h-3 rounded-full bg-primary" : "w-3 h-3 rounded-full bg-grey"}
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        className={person.id === 3 ? "w-3 h-3 rounded-full bg-primary" : "w-3 h-3 rounded-full bg-grey"}
+                        aria-label="Slide 4"
+                      ></button>
                     </div>
                   </div>
 
@@ -115,7 +122,10 @@ function Crew() {
                   onClick={handlePrevCrew}
                 >
                   <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                  <span className="visually-hidden">Previous</span>
+                  <span className="visually-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className='w-6 h-6' fill='white' viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z" /></svg>
+                    {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+                  </span>
                 </button>
                 <button
                   className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-10 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
@@ -125,7 +135,11 @@ function Crew() {
                   onClick={handleNextCrew}
                 >
                   <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                  <span className="visually-hidden">Next</span>
+                  <span className="visually-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className='w-6 h-6' fill='white' viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" /></svg>
+                    {/* <!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
+                  </span>
+
                 </button>
               </div></>
           )
