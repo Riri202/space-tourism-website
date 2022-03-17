@@ -12,14 +12,17 @@ import TitanBG from '../assets/destination/image-titan.png'
 function Destination() {
   const [destination, setDestination] = useState('Moon')
 
-  
-  
+
+
+
   const handleMoon = () => {
     setDestination('Moon')
   }
 
   function handleMars() {
+
     setDestination('Mars')
+
   }
   const handleEuropa = () => {
     setDestination('Europa')
@@ -27,7 +30,7 @@ function Destination() {
   const handleTitan = () => {
     setDestination('Titan')
   }
-   
+
   const images = {
     Moon: MoonBG,
     Mars: MarsBG,
@@ -37,58 +40,68 @@ function Destination() {
 
   return (
     <>
-      <div className='text-8xl flex self-start'><span>01</span>PICK YOUR DESTINATION</div>
-      <div className='flex'>
-       <nav className='flex self-end space-x-6'>
-        <button onClick={handleMoon} className='py-3 transition-all ease-out hover:border-b-4 font-sans '>
-          <p className=' tracking-widest font-thin'>MOON</p>
-        </button>
-        <button onClick={handleMars} className='py-3 transition-all ease-out hover:border-b-4 font-sans '>
-          <p className=' tracking-widest font-thin'>MARS</p>
-        </button>
-        <button onClick={handleEuropa} className='py-3 transition-all ease-out hover:border-b-4 font-sans '>
-          <p className=' tracking-widest font-thin'>EUROPA</p>
-        </button>
-        <button onClick={handleTitan} className='py-3 transition-all ease-out hover:border-b-4 font-sans '>
-          <p className=' tracking-widest font-thin'>TITAN</p>
-        </button>
-      </nav>
+      <div className='flex justify-center items-center md:justify-start'>
+      <div className='text-2xl flex pt-10 md:ml-20 tracking-widest'><span className='font-bold text-grey mr-3'>01</span>PICK YOUR DESTINATION</div>
       </div>
 
-      {destination && Data.destinations.map((place, key)=> {
+
+
+
+
+
+      {destination && Data.destinations.map((place, key) => {
         if (place.name === destination) {
           return (<>
-            
-          <div key={key} className='flex justify-between p-20'>
-            <div>
-              <img src={images[place.name]}alt='destination' />
-            </div>
 
 
-            <div className='flex flex-col w-1/2 space-y-10'>
-               <h1 className='text-6xl'>{place.name === destination ? place.name : null}</h1>
-
+            <div key={key} className='flex flex-col items-center text-center md:text-left md:flex-row md:justify-center md:space-x-40 p-20'>
               <div>
-                <p> {place.description}</p>
+                <img src={images[place.name]} alt='destination' />
               </div>
-              <div className='ring-top ring-1 w-full ring-secondary'></div>
-              <div className='flex space-x-12'>
-                <div>
-                  <p>AVG. DISTANCE</p>
-                  <p>{ place.distance}</p>
+
+              <div className='flex flex-col mt-11 md:mt-0 md:w-1/3 space-y-10'>
+                <div className='flex justify-center md:justify-start'>    
+                <nav className='flex space-x-6 md:pr-12 text-secondary '>
+                  <button onClick={handleMoon} className='py-3 transition-all ease-out hover:border-b-4 hover:border-primary font-sans '>
+                    <p className='md:text-lg tracking-widest font-thin'>MOON</p>
+                  </button>
+                  <button onClick={handleMars} className='py-3 transition-all ease-out hover:border-b-4 hover:border-primary font-sans '>
+                    <p className='md:text-lg tracking-widest font-thin'>MARS</p>
+                  </button>
+                  <button onClick={handleEuropa} className='py-3 transition-all ease-out hover:border-b-4 hover:border-primary font-sans '>
+                    <p className=' tracking-widest font-thin'>EUROPA</p>
+                  </button>
+                  <button onClick={handleTitan} className='py-3 transition-all ease-out hover:border-b-4 hover:border-primary font-sans '>
+                    <p className='md:text-lg tracking-widest font-thin'>TITAN</p>
+                  </button>
+                </nav>
                 </div>
 
+                <h1 className='text-6xl tracking-wider uppercase font-serif'>{place.name === destination ? place.name : null}</h1>
+
                 <div>
-                  <p>EST. TRAVEL TIME</p>
-                  <p>{ place.travel}</p>
+                  <p className='md:text-lg text-secondary'> {place.description}</p>
+                </div>
+                <div className='ring-top ring-1 w-full ring-secondary '></div>
+                <div className='flex  flex-col space-y-5 text-center md:flex-row md:text-left md:space-y-0 md:space-x-12'>
+                  <div className='flex flex-col space-y-3'>
+                    <p className='text-sm font-sans text-secondary tracking-widest'>AVG. DISTANCE</p>
+                    <p className='text-3xl font-serif uppercase tracking-widest'>{place.distance}</p>
+                  </div>
+
+                  <div className='flex flex-col space-y-3'>
+                    <p className='text-sm font-sans text-secondary tracking-widest'>EST. TRAVEL TIME</p>
+                    <p className='text-3xl font-serif uppercase tracking-widest'>{place.travel}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+
+
           </>)
         }
       })}
-     
+
     </>
   )
 }
