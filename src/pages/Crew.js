@@ -67,21 +67,26 @@ function Crew() {
         if (crew === person.id) {
           return (
             <>
-              <div key={key} id="carouselExampleIndicators" className="carousel slide relative" data-bs-ride="carousel">
-
-                <div className="carousel-inner relative flex justify-center pl-20 pr-20 w-full overflow-hidden">
-                  <div className='space-y-28 w-1/2'>
-                    <div className='pt-10 text-2xl tracking-widest'><span className='font-bold text-grey mr-3'>02</span> MEET YOUR CREW</div>
+              <div key={key}  className="carousel slide sm:h-screen  relative" data-bs-ride="carousel">
+                      {/* Contains Crew Info, Carousel Indicators and crew Images */}
+                <div className="carousel-inner relative flex flex-col space-y-5 sm:space-y-0 justify-center items-center sm:flex-row text-center sm:text-left  pl-20 pr-20 w-full overflow-hidden">
+                 <div className='flex flex-col space-y-12 md:pl-20'>
+                  <div className='space-y-16 sm:space-y-28 w-full'>
+                    <div className='pt-10 text-base sm:text-xl  md:text-[1.75rem] flex self-start tracking-widest'><span className='font-bold text-grey mr-3'>02</span> MEET YOUR CREW</div>
+                    
                     <div className='flex flex-col justify-center space-y-8'>
-                      <div className='flex flex-col space-y-4 uppercase'>
-                        <p className='text-2xl font-serif text-grey'>{person.role}</p>
-                        <h1 className='text-6xl tracking-wider font-serif'>{person.name} </h1>
+                      <div className='flex flex-col space-y-8 uppercase'>
+                        <p className='text-base sm:text-2xl md:text-[32px] font-serif text-grey'>{person.role}</p>
+                        <h1 className='text-2xl sm:text-[40px] md:text-[50px] tracking-wider font-serif'>{person.name} </h1>
                       </div>
-                      <p className='md:text-lg font-sans text-secondary'>{person.bio} </p>
                     </div>
+                    </div>
+                      <div className='flex justify-center items-center w-full md:w-1/2'>
+                      <p className='md:text-lg  font-sans text-secondary '>{person.bio} </p>
+                      </div>
 
                     {/* Carousel indicators */}
-                    <div className="carousel-indicators flex justify-start space-x-3 p-0 mb-4">
+                    <div className="carousel-indicators flex justify-center sm:justify-start space-x-3 p-0 mb-4">
                       <button
                         type="button"
                         className={person.id === 0 ? "w-3 h-3 rounded-full bg-primary" : "w-3 h-3 rounded-full bg-grey"}
@@ -105,12 +110,12 @@ function Crew() {
                         aria-label="Slide 4"
                       ></button>
                     </div>
-                  </div>
-
-                  <div className="carousel-item active">
+                 </div>
+                        {/* Crew Images */}
+                  <div className="carousel-item active md:pr-20 w-full">
                     <img
                       src={images[person.id]}
-                      className="block w-full"
+                      className="block"
                       alt="crew member" />
                   </div>
                 </div>
