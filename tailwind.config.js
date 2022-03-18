@@ -17,6 +17,7 @@ module.exports = {
       'sm': '665px',
       'md': '906px',
     },
+    
     extend: {},
   },
   plugins: [],
