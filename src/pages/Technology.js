@@ -29,7 +29,7 @@ function Technology() {
 
   return (
 
-    <div className='sm:h-[110vh]'>
+    <div className='sm:h-[120vh]'>
       <div className='sm:text-xl  md:text-[1.75rem] pt-10 pl-20 tracking-widest'><span className='font-bold  text-grey mr-3'>03</span>SPACE LAUNCH 101</div>
       <div>
         <div className='flex sm:flex-row flex-col space-y-12 sm:space-x-12 sm:space-y-0'>
