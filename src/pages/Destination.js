@@ -17,6 +17,7 @@ function Destination() {
 
   const handleMoon = () => {
     setDestination('Moon')
+    
   }
 
   function handleMars() {
