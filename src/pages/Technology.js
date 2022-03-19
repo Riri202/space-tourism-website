@@ -21,55 +21,68 @@ function Technology() {
   }
 
   const images = {
-    0 : Vehicle,
+    0: Vehicle,
     1: Spaceport,
     2: Capsule,
-   
+
   }
 
   return (
-  
-    <div className='h-screen'>
-      <div className='text-2xl pt-10 pl-20 tracking-widest'><span className='font-bold  text-grey mr-3'>03</span>SPACE LAUNCH 102</div>
+
+    <div className='sm:h-screen'>
+      <div className='sm:text-xl  md:text-[1.75rem] pt-10 pl-20 tracking-widest'><span className='font-bold  text-grey mr-3'>03</span>SPACE LAUNCH 101</div>
       <div>
-      <div className='flex flex-row space-x-12'>
-        <div className='flex flex-col space-y-12 pl-20 my-auto'>
-          <button onClick={handleFirst} className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
-            1
-          </button>
-          <button onClick={handleSecond}  className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
-            2
-          </button>
-          <button onClick={handleThird}  className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
-            3
-          </button>
-        </div>
-        <div>
-        {Data.technology.map((product, key) => {
-          if (product.id === tech) {
-            return (
-              <div key={key} className='flex flex-row justify-between'>
-              <div  className='flex flex-col w-1/2 space-y-5 my-auto'>
-                <p className='font-thin text-secondary uppercase'>The technology</p>
-                <h1 className='text-6xl font-serif tracking-wider uppercase'>{product.name}</h1>
-                <p className='text-secondary'> {product.description} </p>
-              </div>
+        <div className='flex sm:flex-row flex-col space-y-12 sm:space-x-12 sm:space-y-0'>
+          <div className='hidden sm:flex flex-col  space-y-12 pl-20 my-auto'>
+            <button onClick={handleFirst} className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+              1
+            </button>
+            <button onClick={handleSecond} className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+              2
+            </button>
+            <button onClick={handleThird} className='w-14 h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+              3
+            </button>
+          </div>
+          <div>
+            {Data.technology.map((product, key) => {
+              if (product.id === tech) {
+                return (
+                  <div key={key} className='flex flex-col-reverse sm:flex-row justify-between'>
 
-              <div className='my-auto'>
-                <img src={images[product.id]} alt='technology'/>
-              </div>
-              </div>
-            )
-          }
+                    <div className='flex flex-col w-full sm:w-1/2 p-16 sm:p-0 space-y-5 my-auto'>
+                      <div className='flex flex-row justify-center sm:hidden space-x-12 sm:pl-20 my-auto'>
+                        <button onClick={handleFirst} className='w-10 h-10 sm:w-14 sm:h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+                          1
+                        </button>
+                        <button onClick={handleSecond} className='w-10 h-10 sm:w-14 sm:h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+                          2
+                        </button>
+                        <button onClick={handleThird} className='w-10 h-10 sm:w-14 sm:h-14 font-serif rounded-full ring-1 ring-primary focus:bg-primary focus:ring-0 focus:text-main transition-all ease-out duration-150'>
+                          3
+                        </button>
+                      </div>
+                      <p className='font-thin text-sm sm:text-base text-secondary uppercase text-center sm:text-left'>The technology</p>
+                      <h1 className='text-2xl sm:text-[40px] md:text-[56px] font-serif tracking-wider uppercase text-center sm:text-left'>{product.name}</h1>
+                      <p className='text-secondary text-[15px] sm:text-[16px] md:text-lg text-center sm:text-left'> {product.description} </p>
+                    </div>
 
-        })}
+                    <div className='my-auto'>
+                      <img src={images[product.id]} alt='technology' className='w-full md:w-auto'/>
+                    </div>
+
+                  </div>
+                )
+              }
+
+            })}
+          </div>
         </div>
-      </div>
       </div>
 
 
     </div>
-    
+
   )
 }
 
