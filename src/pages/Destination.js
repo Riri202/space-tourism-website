@@ -41,7 +41,7 @@ function Destination() {
   return (
     <>
       <div className='flex justify-center items-center md:justify-start'>
-      <div className='text-2xl flex pt-10 md:ml-20 tracking-widest'><span className='font-bold text-grey mr-3'>01</span>PICK YOUR DESTINATION</div>
+      <div className='text-base sm:text-xl  md:text-[1.75rem] flex pt-10 md:ml-20 tracking-widest'><span className='font-bold text-grey mr-3'>01</span>PICK YOUR DESTINATION</div>
       </div>
 
 
