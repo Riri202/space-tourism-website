@@ -67,7 +67,7 @@ function Crew() {
         if (crew === person.id) {
           return (
             <>
-              <div key={key}  className="carousel sm:h-[110vh] slide my-auto relative" data-bs-ride="carousel">
+              <div key={key}  className="carousel sm:h-[130vh] slide my-auto relative" data-bs-ride="carousel">
                       {/* Contains Crew Info, Carousel Indicators and crew Images */}
                 <div className="carousel-inner relative flex flex-col space-y-5 sm:space-y-0 justify-center items-center sm:flex-row text-center sm:text-left  pl-20 pr-20 w-full overflow-hidden">
                  <div className='flex flex-col space-y-12 md:pl-20'>
