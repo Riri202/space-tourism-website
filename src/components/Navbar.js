@@ -32,7 +32,7 @@ function Navbar({ crew, destination, technology, background }) {
                 <div className={(showNav ? 'left-1/3' : 'left-full') + '  z-20 fixed bottom-0 top-28 w-3/4 sm:static  sm:flex sm:w-auto transition-all ease-in duration-200 backdrop-blur-3xl'}>
                     <div className='flex flex-col space-y-7 sm:space-y-0 sm:flex-row sm:space-x-9 px-11 sm:px-20 sm:mr-4'>
                         <Link to={'/'} onClick={background}>
-                            <button className='flex space-x-2 py-5 transition-all ease-out hover:border-b-4 hover:border-grey focus:border-b-4 focus:border-primary  font-sans '>
+                            <button className='flex space-x-2 py-5 transition-all ease-out hover:border-b-4 hover:border-grey focus:border-b-4 focus:border-primary active:border-b-4 active:border-primary font-sans '>
                                 <p className='font-bold'>00</p>
                                 <p className=' tracking-widest font-thin'>HOME</p>
                             </button>

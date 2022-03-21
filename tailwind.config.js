@@ -16,9 +16,13 @@ module.exports = {
     screens: {
       'sm': '665px',
       'md': '906px',
+    }, 
+  },
+  variants: {
+    extend: {
+      backgroundColor: ["active"],
+      // borderWidth: ['active']
     },
-    
-    extend: {},
   },
   plugins: [],
 }
